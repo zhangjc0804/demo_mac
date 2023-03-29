@@ -6,5 +6,6 @@ def test():
     }
     print(dict['a'])
 
+
 if __name__ == '__main__':
     test()

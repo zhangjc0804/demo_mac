@@ -1,8 +1,8 @@
 def test():
     print('hello python')
-    dict={
-        "a":"name",
-        "b":"age"
+    dict = {
+        "a": "name",
+        "b": "age"
     }
     print(dict['a'])
 

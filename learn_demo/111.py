@@ -1,31 +1,20 @@
-# !/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-===========================
-@Time : 2022/8/24 20:21
-@Author : 张继成
-@Site : laozhang
-@File : 111.py
-@Software: PyCharm
-============================
-"""
+'''
+1、输入一个年份，判断这个年份是不是闰年
+规则：四年一润，百年不润，四百年又润
+2、输入三角形三条边的长度，判断是否构成三角形
+规则：任意两边长度和大于第三边的长度
+'''
 
-import selenium.webdriver
-#driver=selenium.webdriver.Chrome('/Users/zhangjicheng/PycharmProjects/demo/webdriver/chromedriver')
+year = int(input("请输入年份："))
+if year / 4 == 0 or year / 400 == 0:
+    print('今年是闰年')
+else:
+    print("今年不是闰年")
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-def dirver():
-    options = Options()
-    options.add_argument("start-maximized")
-    driver = webdriver.Chrome(options=options)
-    driver.get("https://www.google.com")
-    print(driver.title)
-    driver.close()
-
-
-
-if __name__ == '__main__':
-    dirver()
+a = int(input("请输入第一条边长a："))
+b = int(input("请输入第一条边长b："))
+c = int(input("请输入第一条边长c："))
+if a + b > c or a + c > b or a + c > b:
+    print('这是一个三角形')
+else:
+    print("this is not a sanjaoxing")

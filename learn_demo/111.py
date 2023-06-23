@@ -17,4 +17,4 @@ c = int(input("请输入第一条边长c："))
 if a + b > c or a + c > b or a + c > b:
     print('这是一个三角形')
 else:
-    print("this is not a sanjaoxing")
+    print("this is not a 三角形")
